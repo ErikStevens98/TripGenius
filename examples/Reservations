@@ -1,4 +1,29 @@
-res_manager = ReservationManager()
-    res_manager.import_reservations(api_key="mock_api_key")
-    res_manager.add_reservation({"flight": "67890", "hotel": "XYZ Hotel"})
-    print("Reservations:", res_manager.get_all_reservations())
+from features.Scheduling import TripScheduler, Activity
+from features.ReservationManager import ReservationManager
+from datetime import datetime, timedelta
+
+# Create a sample schedule
+start_date = datetime(2024, 6, 1)
+end_date = datetime(2024, 6, 3)
+
+scheduler = TripScheduler(start_date, end_date)
+
+# Add sample activities
+sample_activities = [
+    Activity("Sagrada Familia Tour", 3, "Cultural", (30, 40), "morning"),
+    Activity("Cooking Class Barcelona", 2, "Culinary", (80, 100), "afternoon"),
+    Activity("Gothic Quarter Walking Tour", 2, "Cultural", (25, 35), "morning")
+]
+
+for activity in sample_activities:
+    scheduler.add_activity(activity)
+
+# Generate schedule
+schedule = scheduler.generate_schedule()
+
+# Create reservation manager and get booking information
+manager = ReservationManager()
+booking_info = manager.get_booking_information(schedule, "Barcelona")
+
+# Print booking summary
+manager.print_booking_summary(booking_info)

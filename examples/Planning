@@ -1,5 +1,45 @@
-group_planner = GroupPlanner()
-    group_planner.create_group("TripGeniusGroup", ["User1", "User2"])
-    group_planner.add_activity("User1", "Beach Party")
-    group_planner.add_activity("User2", "City Tour")
-    print("Group Activities:", group_planner.get_activities())
+import datetime
+from features.Scheduling import TripScheduler, Activity
+# Example usage
+start_date = datetime(2024, 6, 1)
+end_date = datetime(2024, 6, 3)
+
+# Create scheduler
+scheduler = TripScheduler(start_date, end_date)
+
+# Add some sample activities
+sample_activities = [
+    Activity("City Walking Tour", 3, "Cultural", (30, 40), "morning"),
+    Activity("Museum Visit", 2, "Cultural", (15, 20), None),
+    Activity("Food Market Tour", 2, "Culinary", (40, 60), "morning"),
+    Activity("Cooking Class", 3, "Culinary", (80, 100), "afternoon"),
+    Activity("Sunset Sail", 2, "Outdoor", (60, 80), "evening"),
+    Activity("Wine Tasting", 2, "Culinary", (50, 70), "afternoon"),
+    Activity("Night Food Tour", 3, "Culinary", (70, 90), "evening")
+]
+
+for activity in sample_activities:
+    scheduler.add_activity(activity)
+
+# Generate schedule
+schedule = scheduler.generate_schedule()
+
+# Print schedule
+print("Generated Schedule:")
+for date, day_schedule in schedule.items():
+    print(f"\nDate: {date}")
+    for timeblock, activity in day_schedule.items():
+        if activity:
+            print(f"  {timeblock.capitalize()}: {activity.name} "
+                    f"({activity.duration} hours, ${activity.price[0]}-{activity.price[1]})")
+        else:
+            print(f"  {timeblock.capitalize()}: Free time")
+
+# Calculate and print stats
+stats = scheduler.calculate_trip_stats(schedule)
+print("\nTrip Statistics:")
+print(f"Total Activities: {stats['total_activities']}")
+print(f"Estimated Cost Range: ${stats['cost_range'][0]}-{stats['cost_range'][1]}")
+print("\nActivities by Category:")
+for category, count in stats['activities_by_category'].items():
+    print(f"  {category}: {count}")

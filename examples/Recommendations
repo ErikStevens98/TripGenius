@@ -1,4 +1,19 @@
-recommender = AIRecommender()
-    recommender.initialize_preferences(user_id="User123")
-    recommender.log_user_action("selected_activity", "museum_tour")
-    print("Recommendations:", recommender.get_recommendations())
+from features.AIRecommender import *
+generator = TripSuggestionGenerator()
+    
+# Sample questionnaire answers
+answers = {
+    "destination": "Barcelona, Spain",
+    "startDate": "June 2024",
+    "duration": "1 week",
+    "budget": "Moderate ($1000-3000)",
+    "groupSize": "Couple",
+    "interests": ["Cultural", "Food & Dining", "Sightseeing"],
+    "tripPurpose": ["Cultural", "Food & Dining"],
+    "accommodation": "Mid-range Hotel",
+    "transportationPreference": "Public Transport"
+}
+
+# Generate suggestions
+suggestions = generator.generate_suggestions(answers)
+print(suggestions)

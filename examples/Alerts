@@ -1,4 +1,40 @@
-  alert_manager = AlertManager()
-    alert_manager.set_location("Paris")
-    print("Weather Alerts:", alert_manager.get_weather_alerts())
-    print("Safety Alerts:", alert_manager.get_safety_alerts(location="Rome"))
+from features.Scheduling import TripScheduler, Activity
+from features.AlertManager import TripAlertManager
+import datetime
+    
+# Create sample schedule
+start_date = datetime(2024, 6, 1)
+end_date = datetime(2024, 6, 3)
+
+# Create scheduler and add activities
+scheduler = TripScheduler(start_date, end_date)
+sample_activities = [
+    Activity("City Tour", 3, "Cultural", (30, 40), "morning"),
+    Activity("Cooking Class", 2, "Culinary", (80, 100), "afternoon"),
+]
+
+for activity in sample_activities:
+    scheduler.add_activity(activity)
+
+schedule = scheduler.generate_schedule()
+
+# Sample booking info
+booking_info = {
+    "City Tour": {
+        "booking_url": "https://example.com/city-tour",
+        "price_range": "$30-$40",
+        "occurrences": [{"date": "2024-06-01"}]
+    }
+}
+
+# Create alert manager
+alert_manager = TripAlertManager(start_date, end_date)
+alert_manager.generate_trip_alerts(schedule, booking_info)
+
+# Print upcoming alerts
+print("\nUpcoming Alerts:")
+for alert in alert_manager.get_upcoming_alerts():
+    print(f"\n{alert.date.strftime('%Y-%m-%d %H:%M')} - {alert.title}")
+    print(f"Priority: {alert.priority}")
+    print(f"Type: {alert.alert_type}")
+    print(f"Description: {alert.description}")
