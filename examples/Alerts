@@ -1,0 +1,4 @@
+  alert_manager = AlertManager()
+    alert_manager.set_location("Paris")
+    print("Weather Alerts:", alert_manager.get_weather_alerts())
+    print("Safety Alerts:", alert_manager.get_safety_alerts(location="Rome"))

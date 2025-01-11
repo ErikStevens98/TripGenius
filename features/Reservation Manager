@@ -1,0 +1,15 @@
+class ReservationManager:
+    def __init__(self):
+        self.reservations = []
+
+    def import_reservations(self, api_key):
+        # Mock API call for importing reservations
+        # Replace with actual API integration
+        self.reservations.append({"flight": "12345", "hotel": "ABC Hotel"})
+        return True
+
+    def add_reservation(self, reservation):
+        self.reservations.append(reservation)
+
+    def get_all_reservations(self):
+        return self.reservations

@@ -1,0 +1,4 @@
+recommender = AIRecommender()
+    recommender.initialize_preferences(user_id="User123")
+    recommender.log_user_action("selected_activity", "museum_tour")
+    print("Recommendations:", recommender.get_recommendations())

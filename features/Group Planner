@@ -1,0 +1,18 @@
+class GroupPlanner:
+    def __init__(self):
+        self.groups = {}
+
+    def create_group(self, group_name, members):
+        self.groups[group_name] = {"members": members, "activities": []}
+
+    def add_activity(self, user, activity):
+        # Add activity to group's shared plan
+        for group in self.groups.values():
+            if user in group["members"]:
+                group["activities"].append(activity)
+
+    def get_activities(self):
+        activities = []
+        for group in self.groups.values():
+            activities.extend(group["activities"])
+        return activities

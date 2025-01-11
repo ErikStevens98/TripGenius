@@ -1,0 +1,14 @@
+class AlertManager:
+    def __init__(self):
+        self.alerts = []
+
+    def set_location(self, location):
+        self.location = location
+
+    def get_weather_alerts(self):
+        # Mock weather alerts
+        return [{"type": "Weather Alert", "details": "Rain expected in Paris."}]
+
+    def get_safety_alerts(self, location):
+        # Mock safety alerts
+        return [{"type": "Safety Alert", "details": f"Protests reported in {location}."}]

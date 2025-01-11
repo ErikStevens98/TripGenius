@@ -1,0 +1,4 @@
+res_manager = ReservationManager()
+    res_manager.import_reservations(api_key="mock_api_key")
+    res_manager.add_reservation({"flight": "67890", "hotel": "XYZ Hotel"})
+    print("Reservations:", res_manager.get_all_reservations())

@@ -1,0 +1,5 @@
+group_planner = GroupPlanner()
+    group_planner.create_group("TripGeniusGroup", ["User1", "User2"])
+    group_planner.add_activity("User1", "Beach Party")
+    group_planner.add_activity("User2", "City Tour")
+    print("Group Activities:", group_planner.get_activities())
