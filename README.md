@@ -4,8 +4,7 @@
 
 Welcome to **TripGenius**, the intelligent travel assistant designed to simplify trip planning and enhance your travel experiences. Whether you're exploring new destinations, managing budgets, or looking for last-minute activities, **TripGenius** adapts to your preferences and needs, providing personalized itineraries and real-time recommendations powered by artificial intelligence.
 
-![1](https://github.com/user-attachments/assets/4dc46dae-310d-4e8c-99c8-cd2ae85c74e0)
-
+![1](https://github.com/user-attachments/assets/039abb18-0416-41bf-8c6d-0ccea05248ba)
 
 ---
 
@@ -56,8 +55,7 @@ Whether you're planning a weekend getaway or a multi-destination adventure, **Tr
 - **Reliability:** Keeps you informed with up-to-date recommendations and notifications.  
 - **Scalable Features:** Ideal for short trips, long vacations, and even complex multi-city journeys.  
 
-![2](https://github.com/user-attachments/assets/93d1d5fb-3d81-43b0-b124-5c4701a7c3d6)
-
+![2](https://github.com/user-attachments/assets/f1b2f60e-c43c-4135-96db-3562ed6ef602)
 
 ---
 
@@ -169,7 +167,7 @@ We welcome contributions from the community! Fork the repository, create pull re
 
 ## Users over time
 
-![Captura de pantalla 2025-01-11 010909](https://github.com/user-attachments/assets/69a38866-f41b-4a32-9033-b53381d2a146)
+![Captura de pantalla 2025-01-11 010909](https://github.com/user-attachments/assets/27a0aa36-23d9-40ff-a68d-fd1895783ae8)
 
 ---
 
