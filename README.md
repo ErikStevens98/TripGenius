@@ -93,63 +93,63 @@ Whether you're planning a weekend getaway or a multi-destination adventure, **Tr
 
 ## Installation
 
-# Clone the repository
+Clone the repository
 ```bash
 git clone https://github.com/yourusername/TripGenius.git
 ```
 
-# Navigate into the project directory
+Navigate into the project directory
 ```bash
 cd TripGenius
 ```
 
-# Create a virtual environment (optional but recommended)
+Create a virtual environment (optional but recommended)
 ```bash
 python3 -m venv venv
 ```
 
-# Activate the virtual environment
-### For Linux and MacOS
+Activate the virtual environment
+For Linux and MacOS
 ```bash
 source venv/bin/activate
 ```
-### For Windows
+For Windows
 ```bash
 venv\Scripts\activate
 ```
 
-# Upgrade pip to the latest version
+Upgrade pip to the latest version
 ```bash
 pip install --upgrade pip
 ```
 
-# Install project dependencies
+Install project dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-# Set environment variables (if required)
+Set environment variables (if required)
 ```bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
 ```
 
-# Run database migrations (if applicable)
+Run database migrations (if applicable)
 ```bash
 flask db upgrade
 ```
 
-# Launch the application
+Launch the application
 ```bash
 python app.py
 ```
 
-# Access the application in your web browser
+Access the application in your web browser
 ```bash
 http://localhost:5000
 ```
 
-# Deactivate the virtual environment when done
+Deactivate the virtual environment when done
 ```bash
 deactivate
 ```
@@ -170,7 +170,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- **GitHub:** [TripGenius Repository](https://github.com/yourusername/TripGenius)  
+- **GitHub:** [TripGenius Repository](https://github.com/ErikStevens98/TripGenius/tree/main)  
 - **Email:** support@tripgenius.com  
 - **Twitter:** [@TripGeniusAI](https://x.com/geniustrip_)  
 
