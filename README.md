@@ -172,7 +172,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **GitHub:** [TripGenius Repository](https://github.com/yourusername/TripGenius)  
 - **Email:** support@tripgenius.com  
-- **Twitter:** [@TripGeniusAI](https://twitter.com/TripGeniusAI)  
+- **Twitter:** [@TripGeniusAI](https://x.com/geniustrip_)  
 
 ---
 
