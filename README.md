@@ -93,7 +93,6 @@ Whether you're planning a weekend getaway or a multi-destination adventure, **Tr
 
 ## Installation
 
-# Clone the repository
 ```bash
 git clone https://github.com/yourusername/TripGenius.git
 ```
@@ -112,7 +111,12 @@ Activate the virtual environment
 For Linux and MacOS
 ```bash
 source venv/bin/activate
+<<<<<<< HEAD
 ```For Windows
+=======
+```
+For Windows
+>>>>>>> 2cad907a78a3b5c254b1513bf11e7e9afc12d4f0
 ```bash
 venv\Scripts\activate
 ```
