@@ -93,6 +93,7 @@ Whether you're planning a weekend getaway or a multi-destination adventure, **Tr
 
 ## Installation
 
+Clone the repository
 ```bash
 git clone https://github.com/yourusername/TripGenius.git
 ```
